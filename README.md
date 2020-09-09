@@ -17,8 +17,8 @@ This project consists of 2 tasks:
  
     Since the CAPTCHA images contain 5 letters, the denoising step was followed by the splitting of each image into 5 smaller images representing the letters. This was done by     creating bounding boxes around the letters, using the CV2 library. 
     There were a few challenges:
-        - The denoising process did not completely remove all noise, which is why bounding boxes would sometimes be wrongly formed around noisy image sections which did not               represent any letter. Such new images were removed.
-        - Since some letters overlapped in the original image, bounding boxes would occasionally contain 2 letters. In such cases, the image would be split at the letter                 overlap point, creating two separate images.
+      - The denoising process did not completely remove all noise, which is why bounding boxes would sometimes be wrongly formed around noisy image sections which did not               represent any letter. Such new images were removed.
+      - Since some letters overlapped in the original image, bounding boxes would occasionally contain 2 letters. In such cases, the image would be split at the letter                 overlap point, creating two separate images.
     
     Note that ~ 86% of task 2 images were split into 5 different letter images. The remaining images were wrongly split into a different number of letters.
     
